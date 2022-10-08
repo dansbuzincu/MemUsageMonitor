@@ -1,0 +1,21 @@
+# A engine will contain the resources for the producer and consumer threads
+
+# The main resource that will be used is the pidList containing info about the pids froms psutil library API.
+# pidList will contain a structure which consists of 2 lists in order to monitor them in different ways:
+#   - a list for CPU usage of the pid
+#   - a list for Memory usage of the pid
+
+class taskData(NamedTuple):
+    pid : int
+    cpuUsage : float
+    memUsage : float        
+
+class pidStruct():
+    def __init__(self, inputPid):
+        self.pid = inputPid
+        self.cpuUsageList = []
+        self.memUsageList = []
+
+class dataEngine():
+    def __init__(self):
+        pidList = []
