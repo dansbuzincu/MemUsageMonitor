@@ -6,7 +6,7 @@ import DataFetch
 def main():
     
     # guiMethods.createMainWindow()
-    DataFetch.dataFetch()
+    DataFetch.snapshot()
 
     # print("Print test")
 
